@@ -40,7 +40,7 @@ html, body
       background-color: rgba(255, 10, 10, 0.6);
       transition: all 550ms ease-in-out;
       transform-origin: top center;
-      animation: loading 0.5s infinite;
+      animation: loading 1.5s infinite;
       
 }
 
