@@ -1,0 +1,133 @@
+html, body
+{
+      margin: 0;
+      padding: 0;
+      background-color: #d3d3d3;
+      font-family: monospace;
+      font-size: 1.3rem;
+}
+
+.site
+{
+      width: 90%;
+      height: auto;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: auto;
+      grid-template-rows: auto auto 2fr 1fr;
+      grid-template-areas: 
+            "title"
+            "message"
+            "main"
+            "footer";
+}
+
+.title
+{
+      grid-area: title;
+      text-align: center;
+      border-bottom: 2px solid black 
+}
+
+.message
+{
+      grid-area: message;
+      display: none;
+      height: 0em;
+      text-align: center;
+      font-size: 1.5em;
+      font-weight: bolder;
+      background-color: rgba(255, 10, 10, 0.6);
+      transition: all 550ms ease-in-out;
+      transform-origin: top center;
+      animation: loading 0.5s infinite;
+      
+}
+
+.message.loaded
+{
+      height: 3em;
+}
+
+@keyframes loading
+{
+      0%
+      {
+            background-color: rgba(255, 10, 10, 0.6);
+      }
+      10%
+      {
+            background-color: rgba(255, 50, 10, 0.6);
+      }
+      20%
+      {
+            background-color: rgba(255, 90, 10, 0.6);
+      }
+      30%
+      {
+            background-color: rgba(255, 130, 10, 0.6);
+      }
+      40%
+      {
+            background-color: rgba(255, 170, 10, 0.6);
+      }
+      60%
+      {
+            background-color: rgba(255, 130, 10, 0.6);
+      }
+      70%
+      {
+            background-color: rgba(255, 90, 10, 0.6);
+      }
+      80%
+      {
+            background-color: rgba(255, 50, 10, 0.6);
+      }
+      90%
+      {
+            background-color: rgba(255, 10, 10, 0.6);
+      }
+}
+
+.main
+{
+      grid-area: main;
+      width: 50%;
+      padding: 1em 0;
+      margin: 0 auto;
+}
+
+.main form
+{
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      width: 50%;
+      margin: 0 auto;
+}
+
+.main form input[type=button]
+{
+      width: 50%;
+      margin: 0 auto;
+      margin-top: 1em;
+      border: 2px solid black;
+      background-color: lightblue;
+      border-radius: 2px;
+      transition: all 250ms ease-in-out;
+      cursor: pointer;
+}
+
+.main form input[type=button]:hover
+{
+      border-radius: 15px;
+}
+
+.footer
+{
+      grid-area: footer;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+}
